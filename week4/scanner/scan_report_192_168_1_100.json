@@ -1,0 +1,23 @@
+{
+  "target_ip": "192.168.1.100",
+  "scan_time": "2026-02-11 14:44:25",
+  "port_range": {
+    "start": 20,
+    "end": 100
+  },
+  "total_scanned": 81,
+  "open_ports": [
+    {
+      "port": 22,
+      "status": "OPEN",
+      "service": "SSH",
+      "privileged": true
+    },
+    {
+      "port": 80,
+      "status": "OPEN",
+      "service": "HTTP",
+      "privileged": true
+    }
+  ]
+}

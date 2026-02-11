@@ -1,0 +1,50 @@
+{
+  "feed_name": "Daily Threat Intelligence",
+  "date": "2024-12-01",
+  "threats": [
+    {
+      "id": "THREAT-001",
+      "type": "malware",
+      "severity": "CRITICAL",
+      "indicators": {
+        "ips": ["198.51.100.42", "198.51.100.43"],
+        "domains": ["evil-domain.com"]
+      },
+      "active_exploit": true,
+      "description": "Ransomware campaign targeting healthcare"
+    },
+    {
+      "id": "THREAT-002",
+      "type": "phishing",
+      "severity": "HIGH",
+      "indicators": {
+        "ips": ["192.0.2.100"],
+        "domains": ["fake-bank.com", "secure-login.net"]
+      },
+      "active_exploit": false,
+      "description": "Banking credential phishing"
+    },
+    {
+      "id": "THREAT-003",
+      "type": "botnet",
+      "severity": "MEDIUM",
+      "indicators": {
+        "ips": ["203.0.113.50", "203.0.113.51", "203.0.113.52"],
+        "domains": []
+      },
+      "active_exploit": true,
+      "description": "IoT botnet C2 infrastructure"
+    },
+    {
+      "id": "THREAT-004",
+      "type": "malware",
+      "severity": "CRITICAL",
+      "indicators": {
+        "ips": ["198.18.0.100"],
+        "domains": ["malicious-cdn.net"]
+      },
+      "active_exploit": true,
+      "description": "Supply chain attack on npm packages"
+    }
+  ]
+}

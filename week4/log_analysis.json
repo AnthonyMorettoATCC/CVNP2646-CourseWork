@@ -1,0 +1,16 @@
+{
+  "total_entries": 9,
+  "allow_count": 3,
+  "deny_count": 6,
+  "denied_source_ips": [
+    "192.168.1.100",
+    "198.51.100.25",
+    "203.0.113.50"
+  ],
+  "most_targeted_port": 445,
+  "most_targeted_count": 2,
+  "time_range": {
+    "first": "2024-12-01 08:15:23",
+    "last": "2024-12-01 08:40:22"
+  }
+}
