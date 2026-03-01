@@ -1,0 +1,26 @@
+======================================================================
+AUTHENTICATION LOG SECURITY INCIDENT REPORT
+======================================================================
+Generated: 2026-03-01 11:28:35
+Analyst: Anthony Moretto
+
+SUMMARY STATISTICS
+----------------------------------------------------------------------
+Total Events Processed:     15
+Successful Logins:          5
+Failed Logins:              10
+Failure Rate:               66.67%
+Parsing Errors:             0
+
+TOP 5 TARGETED USER ACCOUNTS
+----------------------------------------------------------------------
+1. admin                - 5 failed attempts
+2. root                 - 3 failed attempts
+3. test                 - 2 failed attempts
+
+TOP 5 ATTACKING IP ADDRESSES
+----------------------------------------------------------------------
+1. 203.0.113.45         - 6 failed attempts
+2. 198.51.100.12        - 4 failed attempts
+
+======================================================================

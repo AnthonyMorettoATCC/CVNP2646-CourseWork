@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-01T11:28:35.449809",
+    "analyst": "Anthony Moretto",
+    "classification": "INTERNAL"
+  },
+  "summary": {
+    "total_events": 15,
+    "total_success": 5,
+    "total_fail": 10,
+    "failure_rate": 66.67,
+    "parse_errors": 0
+  },
+  "top_targeted_users": [
+    {
+      "username": "admin",
+      "failed_attempts": 5
+    },
+    {
+      "username": "root",
+      "failed_attempts": 3
+    },
+    {
+      "username": "test",
+      "failed_attempts": 2
+    }
+  ],
+  "top_attacking_ips": [
+    {
+      "ip_address": "203.0.113.45",
+      "failed_attempts": 6
+    },
+    {
+      "ip_address": "198.51.100.12",
+      "failed_attempts": 4
+    }
+  ]
+}
