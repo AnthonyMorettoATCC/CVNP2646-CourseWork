@@ -1,0 +1,15 @@
+{
+    "plan_name": "Weekly Backup Plan",
+    "sources": [
+        {
+            "path": "C:\\Users\\Documents",
+            "recursive": true
+        }
+    ],
+    "destination": {
+        "path": "D:\\Backups"
+    },
+    "retention": {
+        "days": 30
+    }
+}

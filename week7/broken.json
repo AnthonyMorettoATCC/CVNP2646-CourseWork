@@ -1,0 +1,11 @@
+{
+    "plan_name": "Broken Config",
+    "sources": [
+        {
+            "path": "C:\\Users\\Documents",
+            "recursive": true,
+        }  // Missing comma or closing brace
+    "destination": {
+        "path": "D:\\Backups"
+    }
+}
