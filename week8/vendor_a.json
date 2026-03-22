@@ -1,0 +1,56 @@
+[
+  {
+    "id": "va-001",
+    "type": "ip",
+    "value": "203.0.113.10",
+    "confidence": 95,
+    "threat": "critical",
+    "first_seen": "2026-03-20T08:15:00Z",
+    "tags": ["apt28", "ransomware"]
+  },
+  {
+    "id": "va-002",
+    "type": "ip",
+    "value": "198.51.100.45",
+    "confidence": 85,
+    "threat": "high",
+    "first_seen": "2026-03-18T11:30:00Z",
+    "tags": ["phishing", "credential-theft"]
+  },
+  {
+    "id": "va-003",
+    "type": "domain",
+    "value": "malicious-example[.]com",
+    "confidence": 92,
+    "threat": "critical",
+    "first_seen": "2026-03-19T14:05:00Z",
+    "tags": ["apt28", "phishing"]
+  },
+  {
+    "id": "va-004",
+    "type": "domain",
+    "value": "badcdn-example.net",
+    "confidence": 77,
+    "threat": "medium",
+    "first_seen": "2026-03-17T09:20:00Z",
+    "tags": ["ransomware", "botnet"]
+  },
+  {
+    "id": "va-005",
+    "type": "hash",
+    "value": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "confidence": 88,
+    "threat": "high",
+    "first_seen": "2026-03-16T16:45:00Z",
+    "tags": ["ransomware", "apt28"]
+  },
+  {
+    "id": "va-006",
+    "type": "url",
+    "value": "http://203.0.113.77/malware.exe",
+    "confidence": 73,
+    "threat": "medium",
+    "first_seen": "2026-03-15T07:55:00Z",
+    "tags": ["phishing", "credential-theft"]
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "feed_name": "aggregated_threat_intelligence",
+  "feed_version": "1.0",
+  "last_updated": "2026-03-21T20:32:21.028681",
+  "event_count": 4,
+  "events": [
+    {
+      "event_type": "threat_intelligence",
+      "indicator_type": "ip",
+      "indicator_value": "203.0.113.10",
+      "severity_score": 95,
+      "threat_category": "critical",
+      "detection_sources": [
+        "vendor_a",
+        "vendor_c"
+      ],
+      "timestamp": "2026-03-21T20:32:21.028667",
+      "status": "active"
+    },
+    {
+      "event_type": "threat_intelligence",
+      "indicator_type": "domain",
+      "indicator_value": "malicious-example.com",
+      "severity_score": 94,
+      "threat_category": "critical",
+      "detection_sources": [
+        "vendor_c",
+        "vendor_b"
+      ],
+      "timestamp": "2026-03-21T20:32:21.028674",
+      "status": "active"
+    },
+    {
+      "event_type": "threat_intelligence",
+      "indicator_type": "ip",
+      "indicator_value": "198.51.100.45",
+      "severity_score": 85,
+      "threat_category": "high",
+      "detection_sources": [
+        "vendor_b"
+      ],
+      "timestamp": "2026-03-21T20:32:21.028677",
+      "status": "active"
+    },
+    {
+      "event_type": "threat_intelligence",
+      "indicator_type": "hash",
+      "indicator_value": "5f4dcc3b5aa765d61d8327deb882cf99",
+      "severity_score": 88,
+      "threat_category": "high",
+      "detection_sources": [
+        "vendor_a",
+        "vendor_b"
+      ],
+      "timestamp": "2026-03-21T20:32:21.028679",
+      "status": "active"
+    }
+  ]
+}

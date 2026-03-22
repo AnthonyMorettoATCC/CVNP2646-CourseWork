@@ -1,0 +1,56 @@
+[
+  {
+    "id": "vc-001",
+    "category": "ip",
+    "ioc": "203.0.113.10",
+    "reliability": 90,
+    "risk": "high",
+    "source": "vendor_c",
+    "observed_at": "2026-03-20T12:00:00Z"
+  },
+  {
+    "id": "vc-002",
+    "category": "ip",
+    "ioc": "198.51.100.45",
+    "reliability": 83,
+    "risk": "medium",
+    "source": "vendor_c",
+    "observed_at": "2026-03-19T10:20:00Z"
+  },
+  {
+    "id": "vc-003",
+    "category": "domain",
+    "ioc": "malicious-example.com",
+    "reliability": 94,
+    "risk": "critical",
+    "source": "vendor_c",
+    "observed_at": "2026-03-18T14:30:00Z"
+  },
+  {
+    "id": "vc-004",
+    "category": "domain",
+    "ioc": "badcdn-example.net",
+    "reliability": 76,
+    "risk": "medium",
+    "source": "vendor_c",
+    "observed_at": "2026-03-17T08:10:00Z"
+  },
+  {
+    "id": "vc-005",
+    "category": "hash",
+    "ioc": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "reliability": 88,
+    "risk": "high",
+    "source": "vendor_c",
+    "observed_at": "2026-03-16T15:00:00Z"
+  },
+  {
+    "id": "vc-006",
+    "category": "url",
+    "ioc": "http://203.0.113.77/malware.exe",
+    "reliability": 72,
+    "risk": "medium",
+    "source": "vendor_c",
+    "observed_at": "2026-03-15T09:00:00Z"
+  }
+]

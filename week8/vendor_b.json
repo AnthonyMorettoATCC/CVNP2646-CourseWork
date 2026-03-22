@@ -1,0 +1,56 @@
+[
+  {
+    "id": "vb-001",
+    "indicator_type": "ip",
+    "indicator_value": "203.0.113.10",
+    "score": 80,
+    "severity": "high",
+    "source": "vendor_b",
+    "detected_at": "2026-03-20T10:00:00Z"
+  },
+  {
+    "id": "vb-002",
+    "indicator_type": "ip",
+    "indicator_value": "198.51.100.45",
+    "score": 88,
+    "severity": "critical",
+    "source": "vendor_b",
+    "detected_at": "2026-03-19T09:45:00Z"
+  },
+  {
+    "id": "vb-003",
+    "indicator_type": "domain",
+    "indicator_value": "malicious-example.com",
+    "score": 96,
+    "severity": "critical",
+    "source": "vendor_b",
+    "detected_at": "2026-03-18T13:10:00Z"
+  },
+  {
+    "id": "vb-004",
+    "indicator_type": "domain",
+    "indicator_value": "badcdn-example.net",
+    "score": 75,
+    "severity": "medium",
+    "source": "vendor_b",
+    "detected_at": "2026-03-17T08:30:00Z"
+  },
+  {
+    "id": "vb-005",
+    "indicator_type": "hash",
+    "indicator_value": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "score": 90,
+    "severity": "high",
+    "source": "vendor_b",
+    "detected_at": "2026-03-16T14:50:00Z"
+  },
+  {
+    "id": "vb-006",
+    "indicator_type": "url",
+    "indicator_value": "http://203.0.113.77/malware.exe",
+    "score": 78,
+    "severity": "medium",
+    "source": "vendor_b"
+    
+  }
+]

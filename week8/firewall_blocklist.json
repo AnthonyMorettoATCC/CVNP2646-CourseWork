@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-03-21T20:32:21.028021",
+  "total_entries": 4,
+  "blocklist": [
+    {
+      "address": "203.0.113.10",
+      "action": "block",
+      "priority": "high",
+      "reason": "Threat level: critical, Confidence: 95%",
+      "sources": [
+        "vendor_a",
+        "vendor_c"
+      ]
+    },
+    {
+      "address": "malicious-example.com",
+      "action": "block",
+      "priority": "high",
+      "reason": "Threat level: critical, Confidence: 94%",
+      "sources": [
+        "vendor_c",
+        "vendor_b"
+      ]
+    },
+    {
+      "address": "198.51.100.45",
+      "action": "block",
+      "priority": "medium",
+      "reason": "Threat level: high, Confidence: 85%",
+      "sources": [
+        "vendor_b"
+      ]
+    },
+    {
+      "address": "5f4dcc3b5aa765d61d8327deb882cf99",
+      "action": "block",
+      "priority": "medium",
+      "reason": "Threat level: high, Confidence: 88%",
+      "sources": [
+        "vendor_a",
+        "vendor_b"
+      ]
+    }
+  ]
+}
