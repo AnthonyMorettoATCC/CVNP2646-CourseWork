@@ -1,0 +1,48 @@
+============================================================
+     WEEKLY PATCH COMPLIANCE SUMMARY REPORT
+============================================================
+Generated: 2026-03-29 12:55:26
+
+EXECUTIVE SUMMARY
+------------------------------------------------------------
+Total Systems Analyzed:        17
+High-Risk Systems Identified:  7 (41.2%)
+Critical Priority Systems:     1
+Immediate Action Required:     0 systems >90 days unpatched
+
+RISK DISTRIBUTION
+------------------------------------------------------------
+Critical (>=70 points):         1 systems
+High (50-69 points):           6 systems
+Medium (25-49 points):         9 systems
+Low (<25 points):              1 systems
+
+TOP 5 HIGHEST RISK SYSTEMS
+------------------------------------------------------------
+1. FIN-WKS-001 (Score: 75, Critical)
+   Last Patched: 43 days ago | Production | Tags: pci-scope, internet-facing
+
+2. IT-ADM-001 (Score: 65, High)
+   Last Patched: 36 days ago | Production | Tags: privileged-access, domain-joined
+
+3. IT-SEC-001 (Score: 65, High)
+   Last Patched: 35 days ago | Production | Tags: privileged-access, edr-managed
+
+4. IT-SEC-002 (Score: 65, High)
+   Last Patched: 40 days ago | Production | Tags: siem-forwarder, linux
+
+5. FIN-WKS-002 (Score: 60, High)
+   Last Patched: 59 days ago | Production | Tags: pci-scope, encrypted
+
+RECOMMENDED ACTIONS
+------------------------------------------------------------
+IMMEDIATE (Next 48 hours):
+• Patch 1 critical-risk systems
+
+THIS WEEK (Next 7 days):
+• Schedule maintenance windows for 7 high-risk production systems
+
+COMPLIANCE NOTES
+------------------------------------------------------------
+PCI-DSS: 2 systems in PCI scope require immediate attention
+============================================================

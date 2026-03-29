@@ -1,0 +1,98 @@
+{
+  "report_date": "2026-03-29T12:55:26.895681",
+  "report_type": "High Risk Host Assessment",
+  "total_hosts": 17,
+  "total_high_risk": 7,
+  "risk_distribution": {
+    "critical": 1,
+    "high": 6,
+    "medium": 9,
+    "low": 1
+  },
+  "high_risk_hosts": [
+    {
+      "hostname": "FIN-WKS-001",
+      "risk_score": 75,
+      "risk_level": "critical",
+      "days_since_patch": 43,
+      "criticality": "high",
+      "environment": "production",
+      "tags": [
+        "pci-scope",
+        "internet-facing"
+      ]
+    },
+    {
+      "hostname": "IT-ADM-001",
+      "risk_score": 65,
+      "risk_level": "high",
+      "days_since_patch": 36,
+      "criticality": "critical",
+      "environment": "production",
+      "tags": [
+        "privileged-access",
+        "domain-joined"
+      ]
+    },
+    {
+      "hostname": "IT-SEC-001",
+      "risk_score": 65,
+      "risk_level": "high",
+      "days_since_patch": 35,
+      "criticality": "critical",
+      "environment": "production",
+      "tags": [
+        "privileged-access",
+        "edr-managed"
+      ]
+    },
+    {
+      "hostname": "IT-SEC-002",
+      "risk_score": 65,
+      "risk_level": "high",
+      "days_since_patch": 40,
+      "criticality": "critical",
+      "environment": "production",
+      "tags": [
+        "siem-forwarder",
+        "linux"
+      ]
+    },
+    {
+      "hostname": "FIN-WKS-002",
+      "risk_score": 60,
+      "risk_level": "high",
+      "days_since_patch": 59,
+      "criticality": "high",
+      "environment": "production",
+      "tags": [
+        "pci-scope",
+        "encrypted"
+      ]
+    },
+    {
+      "hostname": "ENG-WKS-001",
+      "risk_score": 50,
+      "risk_level": "high",
+      "days_since_patch": 47,
+      "criticality": "high",
+      "environment": "production",
+      "tags": [
+        "developer-tools",
+        "source-code-access"
+      ]
+    },
+    {
+      "hostname": "ENG-WKS-002",
+      "risk_score": 50,
+      "risk_level": "high",
+      "days_since_patch": 41,
+      "criticality": "high",
+      "environment": "production",
+      "tags": [
+        "linux",
+        "container-host"
+      ]
+    }
+  ]
+}
