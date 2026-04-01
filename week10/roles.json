@@ -1,0 +1,57 @@
+[
+  {
+    "user_id": "U001",
+    "role": "admin",
+    "assigned_date": "2025-01-15"
+  },
+  {
+    "user_id": "U002",
+    "role": "hr_manager",
+    "assigned_date": "2024-06-01"
+  },
+  {
+    "user_id": "U002",
+    "role": "admin",
+    "assigned_date": "2024-06-01"
+  },
+  {
+    "user_id": "U003",
+    "role": "finance_analyst",
+    "assigned_date": "2025-03-10"
+  },
+  {
+    "user_id": "U004",
+    "role": "marketing_editor",
+    "assigned_date": "2025-04-22"
+  },
+  {
+    "user_id": "U005",
+    "role": "sales_rep",
+    "assigned_date": "2024-11-05"
+  },
+  {
+    "user_id": "U006",
+    "role": "developer",
+    "assigned_date": "2025-02-18"
+  },
+  {
+    "user_id": "U007",
+    "role": "operations_manager",
+    "assigned_date": "2024-09-09"
+  },
+  {
+    "user_id": "U008",
+    "role": "support_agent",
+    "assigned_date": "2024-07-14"
+  },
+  {
+    "user_id": "U009",
+    "role": "it_support",
+    "assigned_date": "2025-05-01"
+  },
+  {
+    "user_id": "U010",
+    "role": "security_analyst",
+    "assigned_date": "2025-01-27"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "audit_metadata": {
+    "timestamp": "2026-04-01T11:11:00.387867",
+    "total_users_audited": 10,
+    "total_role_assignments": 11,
+    "total_violations": 3,
+    "auditor": "IAM Audit System v1.0"
+  },
+  "violation_summary": {
+    "by_severity": {
+      "CRITICAL": 2,
+      "HIGH": 1
+    },
+    "by_type": {
+      "disabled_with_roles": 2,
+      "unauthorized_admin": 1
+    }
+  },
+  "all_violations": [
+    {
+      "user_id": "U002",
+      "username": "asmith",
+      "violation_type": "disabled_with_roles",
+      "severity": "CRITICAL",
+      "details": "Disabled account has 2 active role(s): hr_manager, admin"
+    },
+    {
+      "user_id": "U005",
+      "username": "cjones",
+      "violation_type": "disabled_with_roles",
+      "severity": "CRITICAL",
+      "details": "Disabled account has 1 active role(s): sales_rep"
+    },
+    {
+      "user_id": "U002",
+      "username": "asmith",
+      "violation_type": "unauthorized_admin",
+      "severity": "HIGH",
+      "details": "HR dept user has admin role: admin",
+      "department": "HR",
+      "role": "admin"
+    }
+  ]
+}
