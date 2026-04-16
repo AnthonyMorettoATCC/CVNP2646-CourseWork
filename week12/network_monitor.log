@@ -1,0 +1,10 @@
+2026-04-16 11:48:58,820 INFO Starting network traffic monitor
+2026-04-16 11:48:58,820 ERROR Failed to parse line 148: 192.168.99.1,10.0.0.1,not_a_port,80,TCP,SYN
+2026-04-16 11:48:58,821 ERROR Failed to parse line 151: 192.168.1.20,10.0.0.1,48200,53,UDP
+2026-04-16 11:48:58,821 INFO Parsed 147 packets with 2 parse errors
+2026-04-16 11:48:58,821 WARNING PORT SCAN DETECTED from 10.0.1.99 (30 ports)
+2026-04-16 11:48:58,821 WARNING SYN FLOOD DETECTED from 172.16.0.77 (110 SYN packets)
+2026-04-16 11:48:58,822 INFO Results written to results.json
+2026-04-16 11:48:58,822 INFO Port scans detected: 1
+2026-04-16 11:48:58,822 INFO SYN floods detected: 1
+2026-04-16 11:48:58,822 INFO Done
