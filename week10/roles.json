@@ -53,5 +53,55 @@
     "user_id": "U010",
     "role": "security_analyst",
     "assigned_date": "2025-01-27"
+  },
+  {
+    "user_id": "U011",
+    "role": "hr_specialist",
+    "assigned_date": "2024-10-03"
+  },
+  {
+    "user_id": "U012",
+    "role": "finance_manager",
+    "assigned_date": "2024-08-12"
+  },
+  {
+    "user_id": "U013",
+    "role": "developer",
+    "assigned_date": "2025-06-06"
+  },
+  {
+    "user_id": "U014",
+    "role": "executive_assistant",
+    "assigned_date": "2025-02-03"
+  },
+  {
+    "user_id": "U015",
+    "role": "operations_analyst",
+    "assigned_date": "2024-05-19"
+  },
+  {
+    "user_id": "U016",
+    "role": "legal_reviewer",
+    "assigned_date": "2024-12-11"
+  },
+  {
+    "user_id": "U017",
+    "role": "marketing_admin",
+    "assigned_date": "2025-03-03"
+  },
+  {
+    "user_id": "U018",
+    "role": "sales_manager",
+    "assigned_date": "2025-01-08"
+  },
+  {
+    "user_id": "U019",
+    "role": "security_admin",
+    "assigned_date": "2024-09-30"
+  },
+  {
+    "user_id": "U020",
+    "role": "researcher",
+    "assigned_date": "2025-04-14"
   }
 ]

@@ -1,0 +1,27 @@
+{
+    "firewall_name": "prod-web-fw",
+    "default_action": "deny",
+    "rules": [
+        {
+            "name": "allow-https",
+            "port": 443,
+            "protocol": "tcp",
+            "source": "0.0.0.0/0",
+            "action": "allow",
+            "enabled": true
+        },
+        {
+            "name": "allow-ssh-internal",
+            "port": 22,
+            "protocol": "tcp",
+            "source": "10.0.0.0/8",
+            "action": "allow",
+            "enabled": true
+        }
+    ],
+    "logging": {
+        "enabled": true,
+        "level": "info",
+        "destination": "siem"
+    }
+}

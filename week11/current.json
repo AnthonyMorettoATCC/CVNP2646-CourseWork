@@ -1,0 +1,34 @@
+{
+    "firewall_name": "prod-web-fw",
+    "default_action": "deny",
+    "rules": [
+        {
+            "name": "allow-https",
+            "port": 8080,
+            "protocol": "tcp",
+            "source": "0.0.0.0/0",
+            "action": "allow",
+            "enabled": true
+        },
+        {
+            "name": "allow-ssh-internal",
+            "port": 22,
+            "protocol": "tcp",
+            "source": "0.0.0.0/0",
+            "action": "allow",
+            "enabled": true
+        },
+        {
+            "name": "temp-debug",
+            "port": 9999,
+            "protocol": "tcp",
+            "source": "0.0.0.0/0",
+            "action": "allow",
+            "enabled": true
+        }
+    ],
+    "logging": {
+        "enabled": false,
+        "level": "debug"
+    }
+}

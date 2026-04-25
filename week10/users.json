@@ -50,23 +50,93 @@
   },
   {
     "user_id": "U008",
-    "username": "rlee",
+    "username": "wrodriguez",
+    "status": "disabled",
+    "department": "Support",
+    "last_login": "2025-11-30"
+  },
+  {
+    "user_id": "U009",
+    "username": "dmartinez",
+    "status": "active",
+    "department": "IT",
+    "last_login": "2026-03-09"
+  },
+  {
+    "user_id": "U010",
+    "username": "hhernandez",
+    "status": "active",
+    "department": "Security",
+    "last_login": "2026-03-08"
+  },
+  {
+    "user_id": "U011",
+    "username": "jlopez",
     "status": "active",
     "department": "HR",
     "last_login": "2026-03-03"
   },
   {
-    "user_id": "U009",
-    "username": "swilson",
-    "status": "active",
-    "department": "Sales",
-    "last_login": "2026-03-02"
+    "user_id": "U012",
+    "username": "ggonzalez",
+    "status": "disabled",
+    "department": "Finance",
+    "last_login": "2025-10-18"
   },
   {
-    "user_id": "U010",
-    "username": "tmoore",
+    "user_id": "U013",
+    "username": "wilsont",
     "status": "active",
     "department": "Engineering",
     "last_login": "2026-03-01"
+  },
+  {
+    "user_id": "U014",
+    "username": "andersonp",
+    "status": "active",
+    "department": "Executive",
+    "last_login": "2026-03-09"
+  },
+  {
+    "user_id": "U015",
+    "username": "thomass",
+    "status": "disabled",
+    "department": "Operations",
+    "last_login": "2025-09-27"
+  },
+  {
+    "user_id": "U016",
+    "username": "taylorr",
+    "status": "active",
+    "department": "Legal",
+    "last_login": "2026-03-02"
+  },
+  {
+    "user_id": "U017",
+    "username": "mooreb",
+    "status": "active",
+    "department": "Marketing",
+    "last_login": "2026-02-28"
+  },
+  {
+    "user_id": "U018",
+    "username": "jacksona",
+    "status": "active",
+    "department": "Sales",
+    "last_login": "2026-03-07"
+  },
+  {
+    "user_id": "U019",
+    "username": "martinl",
+    "status": "disabled",
+    "department": "Security",
+    "last_login": "2025-08-11"
+  },
+  {
+    "user_id": "U020",
+    "username": "leev",
+    "status": "active",
+    "department": "R&D",
+    "last_login": "2026-03-06"
   }
 ]
