@@ -1,0 +1,281 @@
+[
+  {
+    "alert_id": "alert_001",
+    "type": "correlated_attack",
+    "severity": "high",
+    "description": "High-severity data_exfiltration_after_login detected",
+    "details": {
+      "correlation_id": "corr_001",
+      "events": [
+        {
+          "timestamp": "2023-10-01T10:00:00+00:00",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "log_source": "authentication",
+          "user": "admin",
+          "status": "failed",
+          "bytes_transferred": null,
+          "signature": null,
+          "severity": null,
+          "raw_data": {
+            "timestamp": "2023-10-01T10:00:00Z",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.0.0.1",
+            "action": "login_attempt",
+            "user": "admin",
+            "status": "failed",
+            "log_source": "authentication"
+          }
+        },
+        {
+          "timestamp": "2023-10-01T10:01:00+00:00",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "log_source": "authentication",
+          "user": "admin",
+          "status": "failed",
+          "bytes_transferred": null,
+          "signature": null,
+          "severity": null,
+          "raw_data": {
+            "timestamp": "2023-10-01T10:01:00Z",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.0.0.1",
+            "action": "login_attempt",
+            "user": "admin",
+            "status": "failed",
+            "log_source": "authentication"
+          }
+        },
+        {
+          "timestamp": "2023-10-01T10:02:00+00:00",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "log_source": "authentication",
+          "user": "admin",
+          "status": "success",
+          "bytes_transferred": null,
+          "signature": null,
+          "severity": null,
+          "raw_data": {
+            "timestamp": "2023-10-01T10:02:00Z",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.0.0.1",
+            "action": "login_attempt",
+            "user": "admin",
+            "status": "success",
+            "log_source": "authentication"
+          }
+        },
+        {
+          "timestamp": "2023-10-01T10:03:00+00:00",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.2",
+          "action": "data_exfiltration",
+          "log_source": "firewall",
+          "user": "admin",
+          "status": null,
+          "bytes_transferred": 1024000,
+          "signature": null,
+          "severity": null,
+          "raw_data": {
+            "timestamp": "2023-10-01T10:03:00Z",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.0.0.2",
+            "action": "data_exfiltration",
+            "user": "admin",
+            "bytes_transferred": 1024000,
+            "log_source": "firewall"
+          }
+        },
+        {
+          "timestamp": "2023-10-01T10:04:00+00:00",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.3",
+          "action": "malware_detection",
+          "log_source": "ids",
+          "user": null,
+          "status": null,
+          "bytes_transferred": null,
+          "signature": "trojan_dropper",
+          "severity": "high",
+          "raw_data": {
+            "timestamp": "2023-10-01T10:04:00Z",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.0.0.3",
+            "action": "malware_detection",
+            "signature": "trojan_dropper",
+            "severity": "high",
+            "log_source": "ids"
+          }
+        }
+      ],
+      "attack_type": "data_exfiltration_after_login",
+      "severity": "high"
+    }
+  },
+  {
+    "alert_id": "alert_002",
+    "type": "threat_indicator_match",
+    "severity": "high",
+    "description": "Threat indicators detected: Blacklisted IP: 192.168.1.100",
+    "details": {
+      "log_entry": {
+        "timestamp": "2023-10-01T10:00:00+00:00",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "log_source": "authentication",
+        "user": "admin",
+        "status": "failed",
+        "bytes_transferred": null,
+        "signature": null,
+        "severity": null,
+        "raw_data": {
+          "timestamp": "2023-10-01T10:00:00Z",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "user": "admin",
+          "status": "failed",
+          "log_source": "authentication"
+        }
+      },
+      "threats": [
+        "Blacklisted IP: 192.168.1.100"
+      ]
+    }
+  },
+  {
+    "alert_id": "alert_003",
+    "type": "threat_indicator_match",
+    "severity": "high",
+    "description": "Threat indicators detected: Blacklisted IP: 192.168.1.100",
+    "details": {
+      "log_entry": {
+        "timestamp": "2023-10-01T10:01:00+00:00",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "log_source": "authentication",
+        "user": "admin",
+        "status": "failed",
+        "bytes_transferred": null,
+        "signature": null,
+        "severity": null,
+        "raw_data": {
+          "timestamp": "2023-10-01T10:01:00Z",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "user": "admin",
+          "status": "failed",
+          "log_source": "authentication"
+        }
+      },
+      "threats": [
+        "Blacklisted IP: 192.168.1.100"
+      ]
+    }
+  },
+  {
+    "alert_id": "alert_004",
+    "type": "threat_indicator_match",
+    "severity": "high",
+    "description": "Threat indicators detected: Blacklisted IP: 192.168.1.100",
+    "details": {
+      "log_entry": {
+        "timestamp": "2023-10-01T10:02:00+00:00",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "log_source": "authentication",
+        "user": "admin",
+        "status": "success",
+        "bytes_transferred": null,
+        "signature": null,
+        "severity": null,
+        "raw_data": {
+          "timestamp": "2023-10-01T10:02:00Z",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.1",
+          "action": "login_attempt",
+          "user": "admin",
+          "status": "success",
+          "log_source": "authentication"
+        }
+      },
+      "threats": [
+        "Blacklisted IP: 192.168.1.100"
+      ]
+    }
+  },
+  {
+    "alert_id": "alert_005",
+    "type": "threat_indicator_match",
+    "severity": "high",
+    "description": "Threat indicators detected: Blacklisted IP: 192.168.1.100",
+    "details": {
+      "log_entry": {
+        "timestamp": "2023-10-01T10:03:00+00:00",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.2",
+        "action": "data_exfiltration",
+        "log_source": "firewall",
+        "user": "admin",
+        "status": null,
+        "bytes_transferred": 1024000,
+        "signature": null,
+        "severity": null,
+        "raw_data": {
+          "timestamp": "2023-10-01T10:03:00Z",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.2",
+          "action": "data_exfiltration",
+          "user": "admin",
+          "bytes_transferred": 1024000,
+          "log_source": "firewall"
+        }
+      },
+      "threats": [
+        "Blacklisted IP: 192.168.1.100"
+      ]
+    }
+  },
+  {
+    "alert_id": "alert_006",
+    "type": "threat_indicator_match",
+    "severity": "high",
+    "description": "Threat indicators detected: Blacklisted IP: 192.168.1.100, Malicious signature: trojan_dropper",
+    "details": {
+      "log_entry": {
+        "timestamp": "2023-10-01T10:04:00+00:00",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.3",
+        "action": "malware_detection",
+        "log_source": "ids",
+        "user": null,
+        "status": null,
+        "bytes_transferred": null,
+        "signature": "trojan_dropper",
+        "severity": "high",
+        "raw_data": {
+          "timestamp": "2023-10-01T10:04:00Z",
+          "source_ip": "192.168.1.100",
+          "destination_ip": "10.0.0.3",
+          "action": "malware_detection",
+          "signature": "trojan_dropper",
+          "severity": "high",
+          "log_source": "ids"
+        }
+      },
+      "threats": [
+        "Blacklisted IP: 192.168.1.100",
+        "Malicious signature: trojan_dropper"
+      ]
+    }
+  }
+]

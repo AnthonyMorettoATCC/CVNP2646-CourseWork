@@ -1,0 +1,6 @@
+{
+  "time_window_minutes": 5,
+  "thresholds": {
+    "min_events_per_group": 2
+  }
+}

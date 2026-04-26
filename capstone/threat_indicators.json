@@ -1,0 +1,14 @@
+{
+  "ip_blacklist": [
+    "203.0.113.10",
+    "192.168.1.100"
+  ],
+  "malicious_signatures": [
+    "trojan_dropper",
+    "ransomware_loader"
+  ],
+  "suspicious_user_agents": [
+    "BadBot/1.0",
+    "EvilScanner/2.1"
+  ]
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "correlation_id": "corr_001",
+    "attack_type": "brute_force_login",
+    "severity": "medium",
+    "description": "Multiple failed login attempts followed by successful login from same IP",
+    "events": [
+      {
+        "timestamp": "2023-10-01T10:00:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "user": "admin",
+        "status": "failed",
+        "log_source": "authentication"
+      },
+      {
+        "timestamp": "2023-10-01T10:01:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "user": "admin",
+        "status": "failed",
+        "log_source": "authentication"
+      },
+      {
+        "timestamp": "2023-10-01T10:02:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "user": "admin",
+        "status": "success",
+        "log_source": "authentication"
+      }
+    ],
+    "timeline": [
+      "2023-10-01T10:00:00Z: Failed login attempt",
+      "2023-10-01T10:01:00Z: Failed login attempt",
+      "2023-10-01T10:02:00Z: Successful login"
+    ]
+  },
+  {
+    "correlation_id": "corr_002",
+    "attack_type": "data_exfiltration",
+    "severity": "high",
+    "description": "Suspicious data transfer following successful authentication",
+    "events": [
+      {
+        "timestamp": "2023-10-01T10:02:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.1",
+        "action": "login_attempt",
+        "user": "admin",
+        "status": "success",
+        "log_source": "authentication"
+      },
+      {
+        "timestamp": "2023-10-01T10:03:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.2",
+        "action": "data_exfiltration",
+        "user": "admin",
+        "bytes_transferred": 1024000,
+        "log_source": "firewall"
+      }
+    ],
+    "timeline": [
+      "2023-10-01T10:02:00Z: Successful login",
+      "2023-10-01T10:03:00Z: Large data transfer"
+    ]
+  },
+  {
+    "correlation_id": "corr_003",
+    "attack_type": "malware_infection",
+    "severity": "high",
+    "description": "Malware detection following data exfiltration",
+    "events": [
+      {
+        "timestamp": "2023-10-01T10:03:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.2",
+        "action": "data_exfiltration",
+        "user": "admin",
+        "bytes_transferred": 1024000,
+        "log_source": "firewall"
+      },
+      {
+        "timestamp": "2023-10-01T10:04:00Z",
+        "source_ip": "192.168.1.100",
+        "destination_ip": "10.0.0.3",
+        "action": "malware_detection",
+        "signature": "trojan_dropper",
+        "severity": "high",
+        "log_source": "ids"
+      }
+    ],
+    "timeline": [
+      "2023-10-01T10:03:00Z: Data exfiltration",
+      "2023-10-01T10:04:00Z: Malware detected"
+    ]
+  }
+]
