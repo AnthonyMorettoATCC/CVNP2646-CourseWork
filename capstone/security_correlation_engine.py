@@ -31,9 +31,19 @@ class LogEntry:
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'LogEntry':
-        if 'timestamp' not in data:
-            raise KeyError('timestamp')
+        required_fields = ['timestamp', 'source_ip', 'destination_ip', 'action', 'log_source']
+        missing_fields = [field for field in required_fields if field not in data]
+        if missing_fields:
+            raise KeyError(f"Missing required log field(s): {', '.join(missing_fields)}")
+
         timestamp = cls._parse_timestamp(data['timestamp'])
+        bytes_transferred = data.get('bytes_transferred')
+        if bytes_transferred is not None:
+            try:
+                bytes_transferred = int(bytes_transferred)
+            except (TypeError, ValueError):
+                raise ValueError('bytes_transferred must be an integer if provided')
+
         return cls(
             timestamp=timestamp,
             source_ip=data['source_ip'],
@@ -42,7 +52,7 @@ class LogEntry:
             log_source=data['log_source'],
             user=data.get('user'),
             status=data.get('status'),
-            bytes_transferred=data.get('bytes_transferred'),
+            bytes_transferred=bytes_transferred,
             signature=data.get('signature'),
             severity=data.get('severity'),
             raw_data=data
@@ -248,6 +258,46 @@ def load_json_file(file_path: Path) -> Any:
         raise
 
 
+def _validate_string_list(value: Any, name: str) -> List[str]:
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        raise ValueError(f'{name} must be an array of strings')
+    if not all(isinstance(item, str) for item in value):
+        raise ValueError(f'{name} must only contain strings')
+    return value
+
+
+def validate_config(config_data: Any) -> Dict[str, Any]:
+    if not isinstance(config_data, dict):
+        raise ValueError('Config must be a JSON object')
+
+    time_window_minutes = config_data.get('time_window_minutes', DEFAULT_CONFIG['time_window_minutes'])
+    if not isinstance(time_window_minutes, int) or time_window_minutes <= 0:
+        raise ValueError('time_window_minutes must be a positive integer')
+
+    thresholds = config_data.get('thresholds', DEFAULT_CONFIG['thresholds'])
+    if not isinstance(thresholds, dict):
+        raise ValueError('thresholds must be an object')
+
+    min_events = thresholds.get('min_events_per_group', DEFAULT_CONFIG['thresholds']['min_events_per_group'])
+    if not isinstance(min_events, int) or min_events < 1:
+        raise ValueError('thresholds.min_events_per_group must be a positive integer')
+
+    return {'time_window_minutes': time_window_minutes, 'thresholds': {'min_events_per_group': min_events}}
+
+
+def validate_threat_indicators(threat_indicators: Any) -> Dict[str, Any]:
+    if not isinstance(threat_indicators, dict):
+        raise ValueError('Threat indicators must be a JSON object')
+
+    return {
+        'ip_blacklist': _validate_string_list(threat_indicators.get('ip_blacklist', []), 'ip_blacklist'),
+        'malicious_signatures': _validate_string_list(threat_indicators.get('malicious_signatures', []), 'malicious_signatures'),
+        'suspicious_user_agents': _validate_string_list(threat_indicators.get('suspicious_user_agents', []), 'suspicious_user_agents')
+    }
+
+
 def load_log_entries(logs_data: List[Dict[str, Any]]) -> List[LogEntry]:
     log_entries: List[LogEntry] = []
     for log_data in logs_data:
@@ -289,9 +339,10 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     try:
         logs_data = load_json_file(args.logs)
-        config_data = load_json_file(args.config)
-        threat_data = load_json_file(args.intel)
-    except Exception:
+        config_data = validate_config(load_json_file(args.config))
+        threat_data = validate_threat_indicators(load_json_file(args.intel))
+    except Exception as exc:
+        LOGGER.error('Invalid input data: %s', exc)
         return 1
 
     if not isinstance(logs_data, list):
